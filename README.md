@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+# Algo Root Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+This project is a **React.js** application with user authentication and a dashboard containing a sortable, filterable data table with pagination. 
 
-Currently, two official plugins are available:
+## 🚀 Features
+### 1. User Authentication
+- Login and signup using email and password.
+- Input validation with error messages.
+- User session management using **localStorage**.
+- Redirect users to the dashboard after login.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2. Dashboard (After Login)
+- Navbar with:
+  - Logo (left)
+  - User icon (right) with dropdown menu:
+    - Logged-in user details (name/email)
+    - **Logout** option (clears local storage)
+    - **Delete Account** option (removes user data from local storage)
+- Sidebar with the current active page indicator.
 
-## Expanding the ESLint configuration
+### 3. Details Page (Data Table)
+- Displays data in a structured table.
+- Features:
+  - **Sorting** (ascending/descending)
+  - **Searching** (filter data based on user input)
+  - **Pagination** (limit number of rows per page)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 4. General Requirements
+- Uses **localStorage** for authentication & session management.
+- Responsive design for **desktop & mobile**.
+- State management using **useContext** (or Redux if needed).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Technologies Used
+- **React.js** (TypeScript)
+- **React Context API** (for state management)
+- **React Hook Form** (for form validation)
+- **Zod** (for schema validation)
+- **React Router Dom** (for routing)
+- **React Icons** (for icons)
+- **lucid-react** (for responsive design)
+- **Tailwind CSS** (for styling)
+- **LocalStorage** (for authentication session management)
+- **Mock API** (for data table population)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🔧 Setup & Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Bhupendra-Maurya/algoroot-dashboard.git
+   cd algoroot-dashboard
+   ```
+2. Install dependencies:
+   ```bash
+   npm install  # or yarn install
+   ```
+3. Run the project:
+   ```bash
+   npm run dev   # or yarn start
+   ```
+4. Open ` http://localhost:5173` in your browser.
+
+---
+
