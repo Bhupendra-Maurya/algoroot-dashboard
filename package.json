@@ -9,8 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
-    "deploy":"gp-page -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gp-page -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
